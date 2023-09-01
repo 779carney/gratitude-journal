@@ -3,16 +3,10 @@ import axios from "axios";
 // const quotesApi = axios.create({
 //     baseURL: `https://zenquotes.io/api`,
 // });
-axios.get('your-url-here', { timeout: 10000 }) // Increase timeout to 10 seconds
-  .then(response => {
-    // Handle the response
-  })
-  .catch(error => {
-    // Handle the error
-  });
+
 
 export const getQuoteList = () => {
-    return axios.get(`https://zenquotes.io/api/quotes`,  { timeout: 10000 }).then(({data}) => {
+    return axios.get(`https://zenquotes.io/api/quotes`,  { timeout: 10000000 }).then(({data}) => {
        return data
         
     }).catch(err => {

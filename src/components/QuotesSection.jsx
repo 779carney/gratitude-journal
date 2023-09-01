@@ -9,15 +9,17 @@ function QuotesSection(){
   
   useEffect(()=>{
     getQuoteList().then((data)=>{
-    console.log(data, 'this is data');
+    
    setQuotesList(data)
-     console.log(quotesList, 'this is quotes list');
+     
 
-})},[quotesList])
+}).then(()=>{
+  
+})},[])
     return <>
     <section className="quotes-section">
-  <p> this will contain inspirational quotes</p>
-<Quotes/>
+  <h2 id="quotes-h2">Inspirational quotes</h2>
+<Quotes quotesList={quotesList}/>
   </section>
     </>
     }
